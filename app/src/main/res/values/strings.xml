@@ -14,4 +14,5 @@
     <string name="tvSignIn">Iniciar Sesión</string>
     <string name="etPhone">Teléfono</string>
     <string name="userName">Nombre de Usuario</string>
+    <string name="notificacion">Notificacion</string>
 </resources>
