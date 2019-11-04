@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">PupusasYaProjectCli</string>
+    <string name="hintLoginUsu">Usuario</string>
+    <string name="hintLogContr">Contraseña</string>
+    <string name="etNames">Nombres</string>
+    <string name="etLastNames">Apellidos</string>
+    <string name="etEmail">Email</string>
+    <string name="etAddress">Dirección</string>
+    <string name="etPassword">Contraseña</string>
+    <string name="etConfPassword">Confirmar Contraseña</string>
+    <string name="btnSignUp">Registrarme</string>
+    <string name="etUserName">Nombre de Usuario</string>
+    <string name="tvSignUp">Registrarse</string>
+    <string name="tvSignIn">Iniciar Sesión</string>
+    <string name="etPhone">Teléfono</string>
+    <string name="userName">Nombre de Usuario</string>
+</resources>
