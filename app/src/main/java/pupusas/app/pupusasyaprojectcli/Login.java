@@ -33,7 +33,7 @@ public class Login extends AppCompatActivity {
     }
 
     public void LogIn(View view) {
-        //faltan validaciones de si están vacíos los campos
+
         if (usuario.getText().toString().isEmpty()){
             mError("No ha introducido el nombre de usuario.");
         }

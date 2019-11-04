@@ -2,7 +2,12 @@ package pupusas.app.pupusasyaprojectcli;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.AlertDialog;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -34,7 +39,37 @@ public class SignUp extends AppCompatActivity {
     }
 
     public void Save(View view) {
-        initSignUp();
+        try {
+            if(veryfyEt() == true && veryfyPass() == true) initSignUp();
+        } catch (Exception e) { mensaje("Ups... Parece que no tienes conexión a internet"); }
+
+    }
+
+    private boolean veryfyPass(){
+        boolean v = false;
+
+        if (txtPassword.getText().length() < 8){
+            mensaje("La contraseña no puede ser menor de ocho carácteres.");
+        }
+        else { v = true; }
+
+        return v;
+    }
+
+    private boolean veryfyEt(){
+        boolean v;
+        if (txtName.getText().toString().isEmpty() || txtLastName.getText().toString().isEmpty() || txtEmail.getText().toString().isEmpty()
+            || txtPhone.getText().toString().isEmpty() || txtAddress.getText().toString().isEmpty() || txtPassword.getText().toString().isEmpty()
+            || txtConfPassword.getText().toString().isEmpty() || txtUserName.getText().toString().isEmpty()){
+
+            mensaje("Uno de los campos está vacío.");
+            v = false;
+        }
+        else {
+            v = true;
+        }
+
+        return v;
     }
 
     private void initSignUp(){
@@ -91,6 +126,7 @@ public class SignUp extends AppCompatActivity {
                 });
 
                 if (status == true){
+                    mensaje("Usuario creado con éxito.");
                     Intent openLogin = new Intent(SignUp.this, Login.class);
                     SignUp.this.startActivity(openLogin);
                     finish();
@@ -101,9 +137,33 @@ public class SignUp extends AppCompatActivity {
             }
         }
         else {
-            Toast.makeText(SignUp.this, "Las contraseñas no coinciden.", Toast.LENGTH_LONG).show();
+            mensaje("Las contraseñas no coinciden.");
         }
 
 
+    }
+
+    private void mensaje(String mensaje){
+        AlertDialog.Builder builder = new AlertDialog.Builder(SignUp.this);
+        builder.setTitle("Aviso").setMessage(mensaje)
+                .setPositiveButton("Aceptar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        dialogInterface.dismiss();
+                    }
+                });
+
+        AlertDialog alertDialog = builder.create();
+        alertDialog.show();
+    }
+
+    private boolean verifyConexion(){
+        boolean r = false;
+
+        ConnectivityManager connectivityManager = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+
+        if (networkInfo != null && networkInfo.isConnected()) r = true;
+        return r;
     }
 }
