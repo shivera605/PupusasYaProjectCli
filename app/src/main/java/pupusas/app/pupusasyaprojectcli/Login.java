@@ -81,7 +81,7 @@ public class Login extends AppCompatActivity {
         user = usuario.getText().toString();
         pasw = clave.getText().toString();
         AsyncHttpClient client = new AsyncHttpClient();
-        url = "https://pupusasapp.000webhostapp.com/LogIn.php";
+        url = "https://pupusasapp.000webhostapp.com/PupLogin2.php";
         RequestParams parametros = new RequestParams();
         parametros.put("usu", user);
         parametros.put("pas", pasw);
