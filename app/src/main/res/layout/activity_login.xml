@@ -23,46 +23,45 @@
 
             <ImageView
                 android:layout_width="80dp"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:background="@drawable/vperfil2" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-            android:orientation="vertical"
+            android:layout_height="608dp"
+            android:layout_marginTop="20dp"
             android:background="@color/colorDarkGray"
-            android:layout_marginTop="20dp">
+            android:orientation="vertical">
+
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/tvSignIn"
-                android:textSize="25sp"
+                android:layout_height="73dp"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:textColor="@color/colorWhite"/>
+                android:text="@string/tvSignIn"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center"
                 android:layout_marginTop="40dp"
-                >
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/vperfil2"/>
+                    android:background="@drawable/vperfil2" />
 
                 <EditText
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/etUsuario"
-                    android:hint="@string/hintLoginUsu"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:gravity="center"
-                    android:inputType="text"
-                    />
+                    android:hint="@string/hintLoginUsu"
+                    android:inputType="text" />
             </LinearLayout>
 
             <LinearLayout
@@ -73,21 +72,21 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="horizontal">
 
                 <ImageView
                     android:layout_width="30dp"
                     android:layout_height="40dp"
-                    android:background="@drawable/vkey"/>
+                    android:background="@drawable/vkey" />
 
                 <EditText
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
                     android:id="@+id/etPassword"
-                    android:hint="@string/hintLogContr"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:gravity="center"
-                    android:inputType="textPassword"/>
+                    android:hint="@string/hintLogContr"
+                    android:inputType="textPassword" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,29 +97,29 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center">
+                android:layout_height="262dp"
+                android:gravity="center"
+                android:orientation="vertical">
 
                 <Button
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:text="Log In"
                     android:id="@+id/btnLogIn"
-                    android:onClick="LogIn"
-                    android:background="@drawable/button_rounded"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:layout_marginTop="20dp"
-                    android:textColor="@color/colorWhite"/>
+                    android:background="@drawable/button_rounded"
+                    android:onClick="LogIn"
+                    android:text="Entrar"
+                    android:textColor="@color/colorWhite" />
 
                 <Button
-                    android:layout_width="280dp"
-                    android:layout_height="wrap_content"
-                    android:text="@string/btnSignUp"
                     android:id="@+id/btnSignUp"
-                    android:onClick="SignUp"
-                    android:background="@drawable/button_rounded"
+                    android:layout_width="280dp"
+                    android:layout_height="73dp"
                     android:layout_marginTop="15dp"
-                    android:textColor="@color/colorWhite"/>
+                    android:background="@drawable/button_rounded"
+                    android:onClick="SignUp"
+                    android:text="@string/btnSignUp"
+                    android:textColor="@color/colorWhite" />
             </LinearLayout>
         </LinearLayout>
 
