@@ -23,7 +23,7 @@ public class PerfilFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_perfil, container, false);
-        final TextView textView = root.findViewById(R.id.text_gallery);
+        final TextView textView = root.findViewById(R.id.textView);
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {

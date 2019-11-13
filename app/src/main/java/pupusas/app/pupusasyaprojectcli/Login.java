@@ -98,7 +98,7 @@ public class Login extends AppCompatActivity {
                             d = json.getString("IdCliente");
                             di = json.getString("Direccion");
                             e = json.getString("Email");
-                            t = json.getString("Telefono");
+                            t = json.getString("Usuario");
                             c = json.getString("Celular");
                             status = true;
                         }
