@@ -29,4 +29,16 @@
     <string name="menu_tools">Tools</string>
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
+    <string name="nombredireccion">NombreDireccion</string>
+    <string name="telefono">Telefono</string>
+    <string name="nombretelefono">NombreTelefono</string>
+    <string name="celular">Celular</string>
+    <string name="nombrecelular">NombreCelular</string>
+    <string name="email">Email</string>
+    <string name="editar">Editar</string>
+    <string name="codigo">Codigo</string>
+    <string name="codigo_de_la_pupuseria">Codigo  cliente</string>
+    <string name="pupuseria">Usuario</string>
+    <string name="perfil">PERFIL</string>
+    <string name="direccion">Direccion</string>
 </resources>
