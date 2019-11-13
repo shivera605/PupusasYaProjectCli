@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
 
     private EditText usuario;
     private EditText clave;
-    private String user, pasw, url, resultado, n, a;
+    private String user, pasw, url, resultado, n, d, di, e, t, c, a;
     private boolean status = false;
 
     @Override

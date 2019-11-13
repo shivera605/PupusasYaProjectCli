@@ -14,7 +14,7 @@ import androidx.lifecycle.ViewModelProviders;
 
 import pupusas.app.pupusasyaprojectcli.R;
 
-public class HomeFragment extends Fragment {
+public class PerfilFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
 
@@ -23,7 +23,7 @@ public class HomeFragment extends Fragment {
         homeViewModel =
                 ViewModelProviders.of(this).get(HomeViewModel.class);
         View root = inflater.inflate(R.layout.fragment_perfil, container, false);
-        final TextView textView = root.findViewById(R.id.text_home);
+        final TextView textView = root.findViewById(R.id.text_gallery);
         homeViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
