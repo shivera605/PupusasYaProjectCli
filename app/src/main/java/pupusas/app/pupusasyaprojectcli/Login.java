@@ -94,8 +94,12 @@ public class Login extends AppCompatActivity {
 
                         JSONObject json = new JSONObject(respuesta);
                         if (json.names().get(0).equals("exito")){
-                            a = json.getString("Apellido");
                             n = json.getString("Nombre");
+                            d = json.getString("IdCliente");
+                            di = json.getString("Direccion");
+                            e = json.getString("Email");
+                            t = json.getString("Telefono");
+                            c = json.getString("Celular");
                             status = true;
                         }
                         else {
